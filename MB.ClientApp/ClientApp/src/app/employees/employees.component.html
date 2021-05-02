@@ -1,0 +1,34 @@
+<h1>Employees</h1>
+
+Provide an employee id or leave empty to retreave all.
+<br />
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" id="employeeId" formControlName="employeeId">
+  <button class="btn-primary" type="submit" [disabled]="false">Get Employees</button>
+  <br />
+  <div *ngIf="form.controls['employeeId'].hasError('pattern')">
+    <small class="text-danger">Id is not valid.</small>
+  </div>
+</form>
+<br />
+
+<p *ngIf="employeeService.loading"><em>Loading...</em></p>
+<p *ngIf="employeeService.error"><em>{{ employeeService.error.statusText }}</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="employeeService.employees?.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Contract type</th>
+      <th>Anual Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeService.employees">
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.roleName }}</td>
+      <td>{{ employee.contractTypeName }}</td>
+      <td>{{ employee.anualSalary }}</td>
+    </tr>
+  </tbody>
+</table>
