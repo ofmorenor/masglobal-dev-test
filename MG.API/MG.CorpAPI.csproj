@@ -9,8 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BL\MG.BL.csproj" />
+    <ProjectReference Include="..\MG.BL\MG.BL.csproj" />
   </ItemGroup>
+
 
 
 </Project>

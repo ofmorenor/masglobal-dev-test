@@ -11,7 +11,7 @@ namespace BL.Tests
         [TestMethod]
         public async Task ApiReturnsData()
         {
-            var repository = new EmployeeRepositoryMasGlobalApi("");
+            var repository = new EmployeeRepositoryMasGlobalApi();
             var employees = await repository.Get();
             Assert.IsTrue(employees.Any());
 
