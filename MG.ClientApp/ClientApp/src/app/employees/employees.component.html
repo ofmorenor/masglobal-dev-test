@@ -20,6 +20,8 @@ Provide an employee id or leave empty to retreave all.
       <th>Name</th>
       <th>Role</th>
       <th>Contract type</th>
+      <th>MonthlySalary</th>
+      <th>HourlySalary</th>
       <th>Anual Salary</th>
     </tr>
   </thead>
@@ -27,7 +29,9 @@ Provide an employee id or leave empty to retreave all.
     <tr *ngFor="let employee of employeeService.employees">
       <td>{{ employee.name }}</td>
       <td>{{ employee.roleName }}</td>
-      <td>{{ employee.contractTypeName }}</td>
+      <td>{{ employee.contractType }}</td>
+      <td>{{ employee.contractType === 'Monthly' ? employee.monthlySalary : '-' }}</td>
+      <td>{{ employee.contractType === 'Hourly' ? employee.hourlySalary : '-' }}</td>
       <td>{{ employee.anualSalary }}</td>
     </tr>
   </tbody>
