@@ -16,21 +16,20 @@ namespace MG.BL.Model
             {
                 Id = employee.Id,
                 Name = employee.Name,
-                ContractTypeName = employee.ContractTypeName,
-                RoleId = employee.RoleId,
                 RoleName = employee.RoleName,
-                RoleDescription = employee.RoleDescription,
                 HourlySalary = employee.HourlySalary,
-                MonthlySalary = employee.MonthlySalary
+                MonthlySalary = employee.MonthlySalary,
+                AnualSalary = employee.AnualSalary
             };
 
-            if (dto.ContractTypeName == CONTRACT_TYPE_MONTHLY)
+            if (employee.ContractTypeName == CONTRACT_TYPE_MONTHLY)
             {
-                dto.AnualSalary = dto.MonthlySalary * 12;
+                dto.ContractType = "Monthly";
+
             }
-            if (dto.ContractTypeName == CONTRACT_TYPE_HOURLY)
+            if (employee.ContractTypeName == CONTRACT_TYPE_HOURLY)
             {
-                dto.AnualSalary = dto.HourlySalary * 12 * 120;
+                dto.ContractType = "Hourly";
             }
 
             return dto;
