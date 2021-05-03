@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BL.Repository;
-using BL.Repository.Contracts;
-using BL.Services;
-using BL.Services.Contracts;
+using MG.BL.Repository;
+using MG.BL.Repository.Contracts;
+using MG.BL.Services;
+using MG.BL.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CorpAPI
+namespace MG.API
 {
     public class Startup
     {

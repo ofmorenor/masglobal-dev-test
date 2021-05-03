@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Text;
 
-namespace BL.Model
+namespace MG.BL.Model
 {
     public static class EmployeeDTOFactory
     {

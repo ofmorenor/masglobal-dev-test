@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BL.Model;
-using BL.Services.Contracts;
+using MG.BL.Model;
+using MG.BL.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.Extensions.Logging;
 
-namespace CorpAPI.Controllers
+namespace MG.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

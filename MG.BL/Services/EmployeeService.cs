@@ -1,13 +1,13 @@
-﻿using BL.Model;
-using BL.Repository.Contracts;
-using BL.Services.Contracts;
+﻿using MG.BL.Model;
+using MG.BL.Repository.Contracts;
+using MG.BL.Services.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Services
+namespace MG.BL.Services
 {
     public class EmployeeService : IEmployeeService
     {

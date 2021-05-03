@@ -1,10 +1,10 @@
-﻿using BL.Model;
+﻿using MG.BL.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL.Repository.Contracts
+namespace MG.BL.Repository.Contracts
 {
     public interface IEmployeeRepository
     {

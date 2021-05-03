@@ -1,4 +1,4 @@
-using BL.Repository;
+using MG.BL.Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Threading.Tasks;
