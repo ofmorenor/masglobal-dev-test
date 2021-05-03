@@ -9,14 +9,14 @@ namespace MG.BL.Model
         public static readonly string CONTRACT_TYPE_MONTHLY = "MonthlySalaryEmployee";
         public static readonly string CONTRACT_TYPE_HOURLY = "HourlySalaryEmployee";
 
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string ContractTypeName { get; private set; }
-        public int RoleId { get; private set; }
-        public string RoleName { get; private set; }
-        public string RoleDescription { get; private set; }
-        public decimal HourlySalary { get; private set; }
-        public decimal MonthlySalary { get; private set; }
+        public int Id { get; protected set; }
+        public string Name { get; protected set; }
+        public string ContractTypeName { get; protected set; }
+        public int RoleId { get; protected set; }
+        public string RoleName { get; protected set; }
+        public string RoleDescription { get; protected set; }
+        public decimal HourlySalary { get; protected set; }
+        public decimal MonthlySalary { get; protected set; }
         public decimal AnualSalary {
             get {
                 return CalculateAnualSalary();
